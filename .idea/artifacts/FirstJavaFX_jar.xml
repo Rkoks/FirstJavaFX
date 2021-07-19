@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FirstJavaFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FirstJavaFX_jar</output-path>
+    <root id="archive" name="FirstJavaFX.jar">
+      <element id="module-output" name="FirstJavaFX" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX16$/javafx.web.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ControllerManagerStage">
+   <children>
+      <Button fx:id="fullscreenBtn" alignment="TOP_RIGHT" layoutX="535.0" layoutY="36.0" mnemonicParsing="false" onAction="#onClickedFullscreenBtn" text="FullScreen" />
+      <Button fx:id="loadFileBtn" alignment="BOTTOM_LEFT" layoutX="62.0" layoutY="36.0" mnemonicParsing="false" onAction="#onClickedLoadFileBtn" text="Load" />
+      <Label fx:id="file_address_label" alignment="BOTTOM_RIGHT" layoutX="14.0" layoutY="14.0" text="File Addr" />
+      <Button fx:id="saveFileBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#onClickedSaveFileBtn" text="Save" />
+      <AnchorPane layoutY="100.0" prefHeight="400.0" prefWidth="700.0">
+         <children>
+            <Button fx:id="createTeamBtn" layoutX="489.0" layoutY="36.0" mnemonicParsing="false" onAction="#onClickedCreateTeamBtn" text="Создать" />
+            <Label layoutX="14.0" layoutY="18.0" text="Панель работы с командами" />
+            <TextField fx:id="newTeamNameField" layoutX="322.0" layoutY="36.0" promptText="Название" />
+            <ComboBox fx:id="teamChoiceBar" layoutX="14.0" layoutY="36.0" onAction="#onClickedTeamChoiceBar" prefWidth="150.0" visibleRowCount="5" />
+            <AnchorPane fx:id="new_circle_menu" layoutY="150.0" prefHeight="250.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Введите количество баллов за заезд (0-100)" />
+                  <Label layoutX="14.0" layoutY="75.0" text="Введите время потраченное на заезд (в формате мм:сс.млс)" />
+                  <TextField fx:id="newCirclePointsField" layoutX="14.0" layoutY="39.0" prefHeight="26.0" prefWidth="70.0" promptText="Баллы" />
+                  <HBox alignment="BASELINE_CENTER" layoutX="14.0" layoutY="98.0">
+                     <children>
+                        <TextField fx:id="newCircleMinutesField" prefHeight="26.0" prefWidth="30.0" promptText="мм" />
+                        <Label text=":">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newCircleSecondsField" prefHeight="26.0" prefWidth="30.0" promptText="сс" />
+                        <Label text=".">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newCircleMillisField" prefHeight="26.0" prefWidth="42.0" promptText="млс" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="newCircleAcceptBtn" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#onClickedNewCircleAcceptBtn" text="Утвердить" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="change_circle_menu" layoutY="150.0" prefHeight="250.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="81.0" text="Введите количество баллов за заезд (0-100)" />
+                  <Label layoutX="14.0" layoutY="142.0" text="Введите время потраченное на заезд (в формате мм:сс.млс)" />
+                  <TextField fx:id="changeCirclePointsField" layoutX="14.0" layoutY="106.0" prefHeight="26.0" prefWidth="70.0" promptText="Баллы" />
+                  <HBox alignment="BASELINE_CENTER" layoutX="14.0" layoutY="165.0">
+                     <children>
+                        <TextField fx:id="changeCircleMinutesField" prefHeight="26.0" prefWidth="30.0" promptText="мм" />
+                        <Label text=":">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="changeCircleSecondsField" prefHeight="26.0" prefWidth="30.0" promptText="сс" />
+                        <Label text=".">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="changeCircleMillisField" prefHeight="26.0" prefWidth="42.0" promptText="млс" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="changeCircleAcceptBtn" layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onAction="#onClickedChangeCircleAcceptBtn" text="Утвердить" />
+                  <ComboBox fx:id="changeCircleChoiceBar" layoutX="14.0" layoutY="39.0" onAction="#onClickCircleChoiceBar" prefWidth="150.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Выберите заезд для изменения" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="deleteTeamBtn" layoutX="192.0" layoutY="36.0" mnemonicParsing="false" onAction="#onClickedDeleteTeamBtn" text="Удалить команду" />
+            <AnchorPane fx:id="circles_control_menu" layoutY="70.0" prefHeight="80.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Label fx:id="statusLabel" layoutX="14.0" layoutY="48.0" text="Статус работы программы" />
+                  <Button fx:id="addNewCircleBtn" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onClickedAddNewCircleBtn" text="Новый заезд" />
+                  <Button fx:id="deleteLastCircleBtn" layoutX="273.0" layoutY="8.0" mnemonicParsing="false" onAction="#onClickedDeleteLastCircleBtn" text="Удалить последний" />
+                  <Button fx:id="changeCircleBtn" layoutX="124.0" layoutY="8.0" mnemonicParsing="false" onAction="#onClickedChangeCircleBtn" text="Изменить результат" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
